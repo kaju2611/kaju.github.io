@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 100vh;
+}
+/* header */
+header {
+  background-color: #292929;
+  padding: 0 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+}
+header img {
+  width: 400px;
+  padding: 25px;
+}
+
+.butoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 15px;
+
+  cursor: pointer;
+  border-color: transparent;
+  transition: 0.4s;
+
+  display: flex;
+  gap: 10px;
+}
+.btn:hover {
+  border-bottom: 2px solid black;
+}
+
+/* main-content */
+.main-content {
+  display: flex;
+  flex-basis: 0 1 200px;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: 75%;
+  grid-auto-rows: minmax(200px auto);
+  gap: 0 30px;
+
+  margin: 45px 45px;
+}
+
+/* section */
+section h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 15px;
+}
+section .subtitulo {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 1 0 200px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 10px;
+}
+
+.img-content {
+  width: 490px;
+  height: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.img-content:hover {
+  border: 2px solid black;
+}
+
+.esporte h3 {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.esporte p {
+  font-size: 25px;
+  text-align: start;
+  padding-bottom: 20px;
+}
+.esporte {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  flex-basis: 1 0 200px;
+}
+
+/* aside */
+aside {
+  background-color: #292929;
+  border: 2px solid black;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  display: grid;
+  grid-column: 2/3;
+  padding: 10px;
+}
+aside img {
+  width: 350px;
+  border-radius: 15px;
+}
+aside h3 {
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+/* footer */
+footer {
+  background-color: rgb(24, 23, 23);
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer img {
+  width: 400px;
+  padding: 25px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* responsividade */
+
+@media (max-width: 2050px) {
+  .img-content {
+    width: 400px;
+    height: 350px;
+  }
+
+  aside {
+    height: min-content;
+  }
+}
+
+@media (max-width: 1680px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  aside {
+    margin: 0 30%;
+  }
+}
+
+@media (max-width: 1300) {
+  .content {
+    display: grid;
+    grid-template-areas:
+      "boxe crossfit"
+      "natacao roupas"
+      "basquete corrida"
+      "surf trilha"
+      "tenis";
+  }
+
+  .boxe {
+    grid-area: boxe;
+  }
+  .crossfit {
+    grid-area: crossfit;
+  }
+  .natacao {
+    grid-area: natacao;
+  }
+  .roupas {
+    grid-area: roupas;
+  }
+  .basquete {
+    grid-area: basquete;
+  }
+  .corrida {
+    grid-area: corrida;
+  }
+  .surf {
+    grid-area: surf;
+  }
+  .trilha {
+    grid-area: trilha;
+  }
+  .tenis {
+    grid-area: tenis;
+  }
+}
